@@ -1,0 +1,38 @@
+{
+  "name": "api-node-restful-hapi",
+  "version": "0.0.1",
+  "description": "[![pipeline status](https://github.com/viniciusmattosrj/api-node-sms/badges/releaseCandidate/pipeline.svg)](https://github.com/viniciusmattosrj/api-node-sms/commits/releaseCandidate)",
+  "main": "commitlint.config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "release": "standard-version",
+    "start": "npx nodemon -r dotenv/config src/index.js"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "dotenv": "^8.2.0",
+    "husky": "^5.0.9",
+    "nodemon": "^2.0.7",
+    "standard-version": "^9.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "@hapi/hapi": "^20.1.0"
+  }
+}
