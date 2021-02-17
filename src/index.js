@@ -1,6 +1,8 @@
+require('./services/mongo');
+require('dotenv').config();
+
 const Hapi = require('@hapi/hapi');
 const routes = require('./routes');
-require('dotenv').config();
 const { port, host } = require('./config/auth.js');
 
 const init = async () => {
