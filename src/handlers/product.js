@@ -13,10 +13,14 @@ const transformer = product => ({
     }
 });
 
-
 const getAll = async (request, h) => {
     const products = await ProductModel.find({});
-    return {data: products.map(transformer)};
+    return { data: products.map(transformer) };
+};
+
+const find = async (req) => {
+    const product = await ProductModel.findById(req.params.id);
+    return { data: transformer(product) };
 };
 
 const save = async (req, h) => {
@@ -30,7 +34,14 @@ const save = async (req, h) => {
     return h.response(transformer(product)).code(statusCode.CREATED);
 };
 
+const remove = async (req, h) => {
+    await ProductModel.findOneAndDelete({ _id: req.params.id });
+    return h.response().code(statusCode.NO_CONTENT);
+};
+
 module.exports = {
     getAll,
-    save
+    find,
+    save,
+    remove
 };
