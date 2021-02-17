@@ -17,6 +17,11 @@ module.exports = [
         handler: productHandler.save
     },
     {
+        method: 'PUT',
+        path: '/api/v1/products/{id}',
+        handler: productHandler.update
+    },
+    {
         method: 'DELETE',
         path: '/api/v1/products/{id}',
         handler: productHandler.remove
