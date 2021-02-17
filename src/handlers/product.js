@@ -16,7 +16,7 @@ const transformer = product => ({
 
 const getAll = async (request, h) => {
     const products = await ProductModel.find({});
-    return products.map(transformer);
+    return {data: products.map(transformer)};
 };
 
 const save = async (req, h) => {
