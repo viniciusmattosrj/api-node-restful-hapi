@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const Hapi = require('@hapi/hapi');
 const routes = require('./routes');
-const { port, host } = require('./config/auth.js');
+const { port, host } = require('./config/enviroment.js');
 
 const init = async () => {
     const server = Hapi.server({ port, host });
