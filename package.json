@@ -1,6 +1,6 @@
 {
   "name": "api-node-restful-hapi",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "[![pipeline status](https://github.com/viniciusmattosrj/api-node-sms/badges/releaseCandidate/pipeline.svg)](https://github.com/viniciusmattosrj/api-node-sms/commits/releaseCandidate)",
   "main": "commitlint.config.js",
   "directories": {
